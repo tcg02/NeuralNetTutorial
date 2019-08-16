@@ -2,8 +2,9 @@
 //https://www.youtube.com/watch?v=6E6XecoTRVo
 const express = require('express')
 
-const step1 = require("./modules/step1")
-const restaurants = require("./modules/restaurants")
+//const step1 = require("./modules/step1")
+//const restaurants = require("./modules/restaurants")
+const step4 = require("./modules/step4")
 //const count = require("./modules/count")
 
 
@@ -14,23 +15,24 @@ const port = process.env.PORT || 3000
 app.use(express.json())
  
 
-app.get('/step1/', async (req,res)=>{    
+app.get('/step4/', async (req,res)=>{    
     try{  
-        res.send(step1)       
+        
+        res.send(step4)       
         
     }catch(e){
         res.status(500).send(e)
     } 
 })
 
-app.get('/restaurants/', async (req,res)=>{    
-    try{  
-        res.send(restaurants)       
+// app.get('/restaurants/', async (req,res)=>{    
+//     try{  
+//         res.send(restaurants)       
         
-    }catch(e){
-        res.status(500).send(e)
-    } 
-})
+//     }catch(e){
+//         res.status(500).send(e)
+//     } 
+// })
 
 // app.get('/count/', async (req,res)=>{    
 //     try{  
